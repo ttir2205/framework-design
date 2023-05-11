@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>4.18</version> <!-- or whatever the newest version available is -->
+        <relativePath />
+    </parent>
+
+    <artifactId>snsnotify</artifactId>
+    <version>2.1-SNAPSHOT</version>
+    <packaging>hpi</packaging>
+    <name>Amazon SNS Build Notifier</name>
+    <description>Publish build notifications to an AWS SNS Topic</description>
+    <url>https://github.com/jenkinsci/snsnotify-plugin</url>
+
+    <properties>
+        <jenkins.version>2.263.1</jenkins.version>
+        <java.level>8</java.level>
+    </properties>
+
+    <developers>
+        <developer>
+            <id>mikewatt</id>
+            <name>Michael Watt</name>
+        </developer>
+        <developer>
+            <id>jkelabora</id>
+            <name>Julian Kelabora</name>
+        </developer>
+        <developer>
+            <id>nikos</id>
+            <name>Niko Schmuck</name>
+        </developer>
+        <developer>
+            <id>lenslord</id>
+            <name>Michael Meissner</name>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:ssh://github.com/jenkinsci/snsnotify-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/snsnotify-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/snsnotify-plugin</url>
+      <tag>HEAD</tag>
+  </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>aws-java-sdk</artifactId>
+            <version>1.11.995</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>
